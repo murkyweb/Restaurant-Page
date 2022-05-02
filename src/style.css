@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 100vh;
+    background-image: url('bg.jpg');
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.home {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 20px 10px;
+    font-size: 2rem;
+    color: white;
+}
