@@ -4,6 +4,7 @@ function addElementToParent(target, elem) {
     const element = document.createElement(`${elem}`);
     const parent = document.querySelector(`${target}`);
     parent.appendChild(element);
+    return element;
 }
 
 function addContentToElement(elem, content) {

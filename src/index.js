@@ -4,6 +4,7 @@ import { loadHome } from './home';
 import { loadMenu } from './menu';
 
 function switchTab(tab) {
+    wipeTab();
     switch (tab) {
         case 'Home':
             loadHome();
@@ -12,7 +13,7 @@ function switchTab(tab) {
             loadMenu();
             break;
         case 'Contact':
-
+            loadContact();
             break;
     }
 }
@@ -21,7 +22,6 @@ function activateNavBar() {
     const links = document.querySelectorAll('li');
     for (let i = 0; i < links.length; i++) {
         links[i].addEventListener('click', (e) => {
-            wipeTab();
             const tab = e.target.innerText;
             switchTab(tab);
         });
@@ -36,4 +36,4 @@ function wipeTab() {
 pageLoad();
 activateNavBar();
 
-
+export { wipeTab };
