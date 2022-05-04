@@ -5,13 +5,14 @@ import { addClass, addContentToElement, addElementToParent } from "./page-load";
 export function loadHome() {
     addElementToParent('#content', 'main');
     addClass('main', 'home');
-    addElementToParent('.home', 'p');
-    addClass('.home > p', 'para');
-    addContentToElement('.para', `The tastiest pizza 
+    
+    addElementToParent('.home', 'h2');
+    addClass('.home > h2', 'quote');
+    addContentToElement('.quote', `The tastiest pizza 
     on the planet`);
-    addElementToParent('.home', 'button');
+
+    const button = addElementToParent('.home', 'button');
     addContentToElement('button', 'See Full Menu');
-    const button = document.querySelector('button');
     button.addEventListener('click', () => {
         wipeTab();
         loadMenu();

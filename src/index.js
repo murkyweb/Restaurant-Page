@@ -2,6 +2,7 @@ import './style.css';
 import { pageLoad } from "./page-load";
 import { loadHome } from './home';
 import { loadMenu } from './menu';
+import { loadContact } from './contact';
 
 function switchTab(tab) {
     wipeTab();
