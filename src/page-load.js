@@ -1,4 +1,5 @@
 import { loadHome } from "./home";
+import { addItemsToMenu } from "./menu";
 
 function addElementToParent(target, elem) {
     const element = document.createElement(`${elem}`);
@@ -30,15 +31,18 @@ function createNavBar() {
     addContentToElement('li:nth-of-type(3)', 'Contact');
 }
 
-function pageLoad() {
-    createHeader();
-    createNavBar();
-    loadHome();
-}  
-
 function addClass(elem, cls) {
     const element = document.querySelector(`${elem}`);
     element.classList.add(`${cls}`);
 }
+
+function pageLoad() {
+    createHeader();
+    createNavBar();
+    loadHome();
+    addItemsToMenu();
+}  
+
+
 
 export { addElementToParent, addContentToElement, addClass, pageLoad };
