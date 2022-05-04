@@ -12,7 +12,7 @@ function addItemsToMenu () {
     menuRecipes.push(pizzaFactory('QUATTRO STAGIONI', '704g', 'Tomato sauce, mozzarella, ham, chorizo, mushrooms, green peppers.'));
     menuRecipes.push(pizzaFactory('PEPPERONI', '659g', 'Tomato sauce, mozzarella, pepperoni, extra pepperoni and extra mozzarella.'));
     menuRecipes.push(pizzaFactory('VEGETARIAN', '775g', 'Tomato sauce, mozzarella, onion, mushrooms, black olives and corn.'));
-    menuRecipes.push(pizzaFactory('QUATTRO FORMAGGI', '652g', 'Creamy sauce, mozzarella 100% natural, cheddar, parmesan and cheese.'));
+    menuRecipes.push(pizzaFactory('QUATTRO FORMAGGI', '652g', 'Creamy sauce, mozzarella, cheddar, parmesan and cheese.'));
 }
 
 function addItemsToDOM(recipes) {
@@ -24,15 +24,15 @@ function addItemsToDOM(recipes) {
         const item = addElementToParent('.menu', 'div');
         item.setAttribute('data-key', i+1);
 
-        addElementToParent(`[data-key='${i+1}']`, 'p');
+        addElementToParent(`[data-key='${i+1}']`, 'h2');
         addElementToParent(`[data-key='${i+1}']`, 'p');
         addElementToParent(`[data-key='${i+1}']`, 'p');
         const picture = addElementToParent(`[data-key='${i+1}']`, 'img');
         picture.src = `pizza_images/${name.toLowerCase()}.png`;
 
-        addClass(`[data-key='${i+1}'] > p:nth-of-type(1)`, 'name');
-        addClass(`[data-key='${i+1}'] > p:nth-of-type(2)`, 'ingredients');
-        addClass(`[data-key='${i+1}'] > p:nth-of-type(3)`, 'weight');
+        addClass(`[data-key='${i+1}'] > h2`, 'name');
+        addClass(`[data-key='${i+1}'] > p:nth-of-type(1)`, 'ingredients');
+        addClass(`[data-key='${i+1}'] > p:nth-of-type(2)`, 'weight');
         addClass(`[data-key='${i+1}'] > img`, 'picture');
 
         addContentToElement(`[data-key='${i+1}'] > .name`, name);
